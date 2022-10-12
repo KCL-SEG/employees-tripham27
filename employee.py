@@ -1,3 +1,5 @@
+employee code
+Tri Pham
 """Employee pay calculator."""
 """ENTER YOUR SOLUTION HERE!"""
 
@@ -6,7 +8,7 @@
 class Employee:
     totalPay=0
     def __init__(self, name):
-        self.name••••• = name
+        self.name = name
 
     def get_pay(self):
         pass
