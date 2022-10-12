@@ -1,9 +1,5 @@
-employee code
-Tri Pham
 """Employee pay calculator."""
 """ENTER YOUR SOLUTION HERE!"""
-
-
 
 class Employee:
     totalPay=0
