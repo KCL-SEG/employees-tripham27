@@ -35,7 +35,7 @@ class Salary_Employee(Employee):
             output += f" and receives a bonus commission of {self.bonus}."
         else:
             output += "."
-        output += f" Their total pay is {self.get_pay()}"
+        output += f" Their total pay is {self.get_pay()}."
         return output
 
 class Hourly_Employee(Employee):
@@ -63,7 +63,7 @@ class Hourly_Employee(Employee):
             output += f" and receives a bonus commission of {self.bonus}."
         else:
             output += "."
-        output += f" Their total pay is {self.get_pay()}"
+        output += f" Their total pay is {self.get_pay()}."
         return output
 
 
