@@ -30,7 +30,7 @@ class Salary_Employee(Employee):
     def __str__(self):
         output = f"{self.name} works on a monthly salary of {self.salary}"
         if self.numContracts:
-            output += f" and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract."
+            output += f" and receives a commission for {self.numContracts} contract(s) at {self.contractCommission}/contract."
         elif self.bonus:
             output += f" and receives a bonus commission of {self.bonus}."
         else:
@@ -58,7 +58,7 @@ class Hourly_Employee(Employee):
     def __str__(self):
         output = f"{self.name} works on a contract of {self.hours} hours at {self.wage}/hour"
         if self.numContracts:
-            output += f" and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract."
+            output += f" and receives a commission for {self.numContracts} contract(s) at {self.contractCommission}/contract."
         elif self.bonus:
             output += f" and receives a bonus commission of {self.bonus}."
         else:
