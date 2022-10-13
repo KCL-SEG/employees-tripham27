@@ -28,14 +28,14 @@ class Salary_Employee(Employee):
         return totalPay
 
     def __str__(self):
-        output = f'{self.name} works on a monthly salary of {self.salary}'
+        output = f"{self.name} works on a monthly salary of {self.salary}"
         if self.numContracts:
-            output += f' and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract.'
+            output += f" and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract."
         elif self.bonus:
-            output += f' and receives a bonus commission of {self.bonus}.'
+            output += f" and receives a bonus commission of {self.bonus}."
         else:
-            output += '.'
-        output += f' Their total pay is {self.get_pay()}'
+            output += "."
+        output += f" Their total pay is {self.get_pay()}"
         return output
 
 class Hourly_Employee(Employee):
@@ -56,14 +56,14 @@ class Hourly_Employee(Employee):
         return totalPay
 
     def __str__(self):
-        output = f'{self.name} works on a contract of {self.hours} hours at {self.wage}/hour'
+        output = f"{self.name} works on a contract of {self.hours} hours at {self.wage}/hour"
         if self.numContracts:
-            output += f' and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract.'
+            output += f" and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract."
         elif self.bonus:
-            output += f' and receives a bonus commission of {self.bonus}.'
+            output += f" and receives a bonus commission of {self.bonus}."
         else:
-            output += '.'
-        output += f' Their total pay is {self.get_pay()}'
+            output += "."
+        output += f" Their total pay is {self.get_pay()}"
         return output
 
 
