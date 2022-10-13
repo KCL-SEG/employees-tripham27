@@ -22,7 +22,7 @@ class Salary_Employee(Employee):
 
     def get_pay(self):
         self.totalPay += self.salary
-        if self.numContracts & self.contractCommission:
+        if self.numContracts:
             self.totalPay += self.numContracts * self.contractCommission
         if self.bonus:
                 self.totalPay += self.bonus
@@ -30,7 +30,7 @@ class Salary_Employee(Employee):
 
     def __str__(self):
         output = f'{self.name} works on a monthly salary of {self.salary}'
-        if self.numContracts & self.contractCommission:
+        if self.numContracts:
             output += f' and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract.'
         elif self.bonus:
             output += f' and receives a bonus commission of {self.bonus}.'
@@ -50,7 +50,7 @@ class Hourly_Employee(Employee):
 
     def get_pay(self):
         self.totalPay += self.hours * self.wage
-        if self.numContracts & self.contractCommission:
+        if self.numContracts:
             self.totalPay += self.numContracts * self.contractCommission
         if self.bonus:
                 self.totalPay += self.bonus
@@ -58,7 +58,7 @@ class Hourly_Employee(Employee):
 
     def __str__(self):
         output = f'{self.name} works on a contract of {self.hours} hours at {self.wage}/hour'
-        if self.numContracts & self.contractCommission:
+        if self.numContracts:
             output += f' and receives a commission for {self.numContracts} conract(s) at {self.contractCommission}/contract.'
         elif self.bonus:
             output += f' and receives a bonus commission of {self.bonus}.'
