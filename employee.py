@@ -2,7 +2,6 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 class Employee:
-    totalPay=0
     def __init__(self, name):
         self.name = name
 
@@ -21,12 +20,12 @@ class Salary_Employee(Employee):
         self.bonus = bonus
 
     def get_pay(self):
-        self.totalPay += self.salary
+        totalPay = self.salary
         if self.numContracts:
-            self.totalPay += self.numContracts * self.contractCommission
+            totalPay += self.numContracts * self.contractCommission
         if self.bonus:
-                self.totalPay += self.bonus
-        return self.totalPay
+            totalPay += self.bonus
+        return totalPay
 
     def __str__(self):
         output = f'{self.name} works on a monthly salary of {self.salary}'
@@ -49,12 +48,12 @@ class Hourly_Employee(Employee):
         self.bonus = bonus
 
     def get_pay(self):
-        self.totalPay += self.hours * self.wage
+        totalPay =  self.hours * self.wage
         if self.numContracts:
-            self.totalPay += self.numContracts * self.contractCommission
+            totalPay += self.numContracts * self.contractCommission
         if self.bonus:
-                self.totalPay += self.bonus
-        return self.totalPay
+            totalPay += self.bonus
+        return totalPay
 
     def __str__(self):
         output = f'{self.name} works on a contract of {self.hours} hours at {self.wage}/hour'
